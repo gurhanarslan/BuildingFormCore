@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Create>
+@{
+    ViewData["Title"] = "List";
+}
+
+<h2>List</h2>
+
+<table class="table table-bordered">
+    <thead class="bg-danger text-info">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>IsApproved?</th>
+            <th>Uptade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Category</td>
+            <td>@item.Price</td>
+            <td>@item.IsApproved</td>
+            <td><a asp-action="Uptade" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Uptade</a></td>
+        </tr>
+        }
+
+    </tbody>
+
+  
+</table>

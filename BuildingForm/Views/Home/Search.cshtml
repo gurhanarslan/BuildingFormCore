@@ -1,0 +1,22 @@
+﻿@model Search
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h2>Search</h2>
+
+<div class="row mt-3">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form asp-action="Search" method="get">
+            <label asp-for="Name"></label>
+            <input asp-for="Name" class="form-control"/>
+
+            <input type="submit" value="Submit" class="btn btn-primary mt-3" />
+
+
+        </form>
+
+    </div> 
+    <div class="col-md-2"></div>
+</div>

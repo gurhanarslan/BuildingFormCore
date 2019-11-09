@@ -1,0 +1,36 @@
+﻿@model Create
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create" asp-controller="Home" method="post">
+
+
+    <label asp-for="Id">ID</label>
+    <input asp-for="Id" class="form-control" />
+    <hr />
+    <label asp-for="Name">NAME</label>
+    <input asp-for="Name" class="form-control" />
+    <hr />
+    <label asp-for="Description">DESCRIPTION</label>
+    <input asp-for="Description" class="form-control" />
+    <hr />
+    <label asp-for="Price">PRICE</label>
+    <input asp-for="Price" class="form-control" />
+    <hr />
+    <label asp-for="Category">CATEGORY</label>
+    <select asp-for="Category">
+        <option selected disabled value="">Select Category</option>
+        <option value="Phone">Phone</option>
+        <option value="Computer">Computer</option>
+        <option value="Tablet">Tablet</option>
+    </select>
+    <input type="checkbox" name="IsApproved" id="IsApproved"> Onay
+
+    <input type="submit" value="Submit" class="btn btn-primary" />
+
+
+
+</form>
